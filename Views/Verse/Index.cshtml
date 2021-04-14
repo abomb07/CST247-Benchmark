@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Bible.Models.BibleVerse>
+
+<p>
+    <a asp-controller="Verse" asp-action="VerseForm">Create New Verse</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.testament)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.chapter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.verse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.text)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.testament)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.book)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chapter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.verse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.text)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

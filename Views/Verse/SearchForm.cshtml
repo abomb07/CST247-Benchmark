@@ -1,0 +1,38 @@
+﻿@model Bible.Models.BibleVerse
+
+<h4>Search Bible Verses</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="FindVerse">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="testament" class="control-label"></label>
+                <input asp-for="testament" class="form-control" />
+                <span asp-validation-for="testament" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book" class="control-label"></label>
+                <input asp-for="book" class="form-control" />
+                <span asp-validation-for="book" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="chapter" class="control-label"></label>
+                <input asp-for="chapter" class="form-control" />
+                <span asp-validation-for="chapter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="verse" class="control-label"></label>
+                <input asp-for="verse" class="form-control" />
+                <span asp-validation-for="verse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

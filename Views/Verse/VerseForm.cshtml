@@ -1,0 +1,44 @@
+﻿@model Bible.Models.BibleVerse
+
+<h4>Add Bible Verse</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddVerse">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="testament" class="control-label"></label>
+                <input asp-for="testament" class="form-control" />
+                <span asp-validation-for="testament" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="book" class="control-label"></label>
+                <input asp-for="book" class="form-control" />
+                <span asp-validation-for="book" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="chapter" class="control-label"></label>
+                <input asp-for="chapter" class="form-control" />
+                <span asp-validation-for="chapter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="verse" class="control-label"></label>
+                <input asp-for="verse" class="form-control" />
+                <span asp-validation-for="verse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="text" class="control-label"></label>
+                <input asp-for="text" class="form-control" />
+                <span asp-validation-for="text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

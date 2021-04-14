@@ -1,0 +1,38 @@
+﻿@model Bible.Models.BibleVerse
+
+<div>
+    <h4>Bible Verse Found</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.testament)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.testament)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.book)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.book)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.chapter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.chapter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.verse)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.verse)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.text)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.text)
+        </dd>
+    </dl>
+</div>
